@@ -5,10 +5,18 @@ body {
   font-family: 'Indie Flower', cursive;
   font-size: 1.2em;
 
-  background-color: #b0c49b;
-
 }
 
 .allergies {
    font-weight: bold;
+}
+
+#burgers {
+  background-color: black;
+  color: white;
+}
+
+
+#customer {
+
 }
