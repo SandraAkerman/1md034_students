@@ -16,7 +16,10 @@ body {
   color: white;
 }
 
-
 #customer {
-
 }
+
+button:hover {
+  color: #88bd8a;
+  cursor: pointer;                      
+   }
