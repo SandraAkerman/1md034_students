@@ -6,4 +6,9 @@ body {
   font-size: 1.2em;
 
   background-color: #b0c49b;
+
+}
+
+.allergies {
+   font-weight: bold;
 }
