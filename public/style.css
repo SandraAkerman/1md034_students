@@ -12,6 +12,14 @@ body {
    font-weight: bold;
 }
 
+#header {
+ margin: 20px 20px 20px 20px;
+}
+
+#headerimg {
+ opacity: 0.7;
+}
+
 #burgers {
   background-color: black;
   color: white;
@@ -36,13 +44,6 @@ table {
   margin: 0 auto;
 }
 
-h1 {
-margin: 20px 20px;
-}
-
-section {
-
-}
 
 button {
   margin-top: 10px;
