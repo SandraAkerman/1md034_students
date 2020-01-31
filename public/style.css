@@ -15,17 +15,33 @@ body {
 #burgers {
   background-color: black;
   color: white;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
 }
 
 #customer {
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
 }
 
 button:hover {
   color: #88bd8a;
   cursor: pointer;
-   }
+}
 
 table {
   width: 80%;
   margin: 0 auto;
+}
+
+h1 {
+margin: 20px 20px;
+}
+
+section {
+
+}
+
+button {
+  margin-top: 15px;
 }
