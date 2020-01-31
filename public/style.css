@@ -12,13 +12,26 @@ body {
    font-weight: bold;
 }
 
+
 #header {
- margin: 20px 20px 20px 20px;
+height: 200px;
+margin: 20px 20px 20px 20px;
+overflow: hidden;
+
+
 }
 
-#headerimg {
- opacity: 0.7;
+#header h1{
+position: absolute;
+padding: 30px 1px 1px 40px;
 }
+
+
+#header img {
+ opacity: 0.5;
+ width: 100%;
+}
+
 
 #burgers {
   background-color: black;
