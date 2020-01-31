@@ -16,12 +16,14 @@ body {
   background-color: black;
   color: white;
   margin: 20px 20px 20px 20px;
-  padding: 20px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
+  border: 4px dashed white;
 }
 
 #customer {
   margin: 20px 20px 20px 20px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 0px 20px;
+  border: 4px dashed black;
 }
 
 button:hover {
@@ -43,5 +45,6 @@ section {
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
