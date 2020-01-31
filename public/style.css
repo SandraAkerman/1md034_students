@@ -52,11 +52,27 @@ button:hover {
   cursor: pointer;
 }
 
-table {
-  width: 80%;
-  margin: 0 auto;
-}
+.wrapper {
+     display: grid;
+     grid-gap: 100px;
+     grid-template-columns: 400px 400px 400px;
+ }
 
+
+ .a {
+      grid-column: 1;
+      grid-row: 1;
+  }
+
+ .b {
+     grid-column: 2;
+     grid-row: 2;
+ }
+
+ .c {
+     grid-column: 3;
+     grid-row: 3;
+ }
 
 button {
   margin-top: 10px;
