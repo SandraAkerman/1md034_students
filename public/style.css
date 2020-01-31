@@ -4,6 +4,7 @@ body {
 
   font-family: 'Indie Flower', cursive;
   font-size: 1.2em;
+  margin: 0 auto;
 
 }
 
@@ -21,5 +22,10 @@ body {
 
 button:hover {
   color: #88bd8a;
-  cursor: pointer;                      
+  cursor: pointer;
    }
+
+table {
+  width: 80%;
+  margin: 0 auto;
+}
