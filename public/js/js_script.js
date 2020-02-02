@@ -1,12 +1,13 @@
-function menuItem(nm, cal, mo, gl, nt, img) {
+function menuItem(nm, cal, mo, al, img) {
   this.name = nm;
   this.kcal = cal;
   this.madeOf = mo;
   this.allergens = al;
   this.imagePath = img;
-  this.nameAndKcal = function();
+  this.nameAndKcal = function(){
     return this.name + ' ' + this.kcal;
 };
+}
 
 let burger1 = new menuItem("Smoky burger", "500kCal","patty made from black beans and sweet potatoes","contains gluten");
 let burger2 = new menuItem("California burger", "550kCal","patty made from carrots and quick oats", "contains gluten");
