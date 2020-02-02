@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
 
 body {
 
@@ -14,8 +19,8 @@ body {
 
 
 #header {
-height: 200px;
-margin: 20px 20px 20px 20px;
+height: 10em;
+margin: 2em 2em 2em 2em;
 overflow: hidden;
 
 
@@ -23,27 +28,27 @@ overflow: hidden;
 
 #header h1{
 position: absolute;
-padding: 30px 1px 1px 40px;
+padding: 1em 2em 2em 1.5em;
 }
 
 
 #header img {
- opacity: 0.5;
+ opacity: 0.3;
  width: 100%;
 }
 
 
 #burgers {
-  background-color: black;
+  background-color: #59734c;
   color: white;
-  margin: 20px 20px 20px 20px;
-  padding: 10px 20px 20px 20px;
+  margin: 2em 2em 2em 2em;
+  padding: 2em 4em 2em 4em;
   border: 4px dashed white;
 }
 
 #customer {
-  margin: 20px 20px 20px 20px;
-  padding: 20px 20px 0px 20px;
+  margin: 2em 2em 2em 2em;
+  padding: 2em 2em 1em 2em;
   border: 4px dashed black;
 }
 
@@ -54,8 +59,8 @@ button:hover {
 
 .wrapper {
      display: grid;
-     grid-gap: 100px;
-     grid-template-columns: 400px 400px 400px;
+     grid-gap: 5em;
+     grid-template-columns: 18em 18em 18em;
  }
 
 
@@ -75,6 +80,7 @@ button:hover {
  }
 
 button {
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 1em;
+  margin-left: 3em;
+  margin-bottom: 2em;
 }
