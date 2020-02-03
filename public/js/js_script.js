@@ -40,25 +40,7 @@ var burgerFive = document.createElement("p");
 burgerFive.innerHTML = burger5.nameAndKcal();
 document.getElementById("myID").appendChild(burgerFive);
 
-/* And this is your vue_script.js */
-const vm = new Vue({
-  el: '#myID',
-  data: {
-    /* Then you can copy it to the Vue object like this */
-    burgerString: burger1,
-    burgerString2: burger2,
-    burgerString3: burger3,
-    burgerString4: burger4,
-    burgerString5: burger5,
-  },
-  methods: {
-    printString: function () {
-    /* When accessing variables and functions defined
-       within Vue, you need the 'this' keyword */
-      console.log(this.burgerString + burger5);
-  }
-  }
-})
+
 
 
 console.log(burger1.nameAndKcal(), burger2.nameAndKcal(), burger3.nameAndKcal(), burger4.nameAndKcal(), burger5.nameAndKcal());
