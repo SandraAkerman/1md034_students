@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <script src="js/js_script.js" defer></script>
+    <!--  <script src="js/js_script.js" defer></script> -->
       <script src="js/vue_script.js" defer></script>
       <script src="https://vuejs.org/js/vue.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,14 +17,25 @@
         <img src="https://farmacyvegankitchen.com/wp-content/uploads/2017/05/header.jpg" alt="produce" title="produce">
       </section>
 
-
-
         <section id="burgers">
           <h2>Select burger</h2>
           <p>This is where you execute burger selection</p>
 
-          <div id="allburgers" class = "wrapper">
-          </div>
+            <div id="allburgers" class = "wrapper">
+              <div v-for="burger in menu">
+                <h3>{{burger.name}}</h3>
+                <img v-bind:src="burger.imagePath" :height="400"><br>
+                <ul>
+                  <li>{{burger.kcal}} </li>
+                  <li>{{burger.madeOf}} </li>
+                <span v-if="burger.gluten">
+                <li><b>contains gluten</b></li>
+                </span>
+                <span v-if="burger.hazelnuts" >
+                <li><b>contains hazelnuts</b></li>
+                </span>
+              </ul>
+            </div>
 <!--
         <div class="wrapper">
             <div class"box a">

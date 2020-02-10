@@ -67,7 +67,7 @@ for (i; i < menu.length; i++) {
 ;
 }
 
-
+*/
 
 /*
 var burgerOne = document.createElement("p");
@@ -91,12 +91,4 @@ document.getElementById("myID").appendChild(burgerFour);
 var burgerFive = document.createElement("p");
 burgerFive.innerHTML = burger5.nameAndKcal();
 document.getElementById("myID").appendChild(burgerFive);
-*/
-
-/*
-https://www.sainsburysmagazine.co.uk/uploads/media/675x882/09/9289-Vegan-burger.jpg?v=1-0
-https://www.darngoodveggies.com/wp-content/uploads/2016/04/IMG_5050.jpg
-https://elavegan.com/wp-content/uploads/2019/09/Vegan-burger-with-Awesome-burger-patty-veggies-and-homemade-cheese.jpg
-
-console.log(burger1.nameAndKcal(), burger2.nameAndKcal(), burger3.nameAndKcal(), burger4.nameAndKcal(), burger5.nameAndKcal());
 */
