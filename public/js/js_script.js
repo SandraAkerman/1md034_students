@@ -49,12 +49,14 @@ for (i; i < menu.length; i++) {
   burger.appendChild(kCal);
 
   if(menu[i].gluten) {
-    gluten.innerHTML = "contains gluten";
+    gl = "contains gluten";
+    gluten.innerHTML = gl.bold();
 		burger.appendChild(gluten);
     }
 
   if(menu[i].hazelnuts){
-    hazelnuts.innerHTML = "contains hazelnuts";
+    hz = "contains hazelnuts";
+    hazelnuts.innerHTML = hz.bold();
     burger.appendChild(hazelnuts);
      }
 
