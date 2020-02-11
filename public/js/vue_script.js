@@ -23,10 +23,32 @@ let burger5 = new menuItem("Healthy burger", "450kCal","patty made from oats and
 
 var menu = [burger1, burger2, burger3, burger4, burger5];
 */
-
+/*
 const vm = new Vue({
   el: '#allburgers',
   data: {
   	menu: menu,
+    checkedBurger: "",
   }
 })
+*/
+
+const bt = new Vue({
+    el: '#sectionwrapper',
+    data: {
+      menu: menu,
+      name: "",
+      email: "",
+      street: "",
+      house: "",
+      payment: "",
+      gender: "",
+      checkedBurger:[],
+    },
+    methods: {
+        markDone: function() {
+            /* Add your function's code just like in
+            pure JavaScript within these curly braces */
+        }
+    }
+});

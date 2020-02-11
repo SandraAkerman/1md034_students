@@ -1,145 +1,137 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <script type="text/javascript" src="js/menu.js"></script>
-    <!--  <script src="js/js_script.js" defer></script>-->
-      <script src="js/vue_script.js" defer></script>
-      <script src="https://vuejs.org/js/vue.js"></script>
-      <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Vegan burgers</title><br>
-        <meta charset="utf-8"/>
-    </head>
+<head>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <!--  <script src="js/js_script.js" defer></script>-->
+  <script src="js/vue_script.js" defer></script>
+  <script src="https://vuejs.org/js/vue.js"></script>
 
-    <body>
-      <main>
-        <section id="header">
-        <h1>Welcome to Vegan Burgers Online</h1>
-        <img src="https://farmacyvegankitchen.com/wp-content/uploads/2017/05/header.jpg" alt="produce" title="produce">
-      </section>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Vegan burgers</title><br>
+  <meta charset="utf-8"/>
+</head>
 
-        <section id="burgers">
-          <h2>Select burger</h2>
-          <p>This is where you execute burger selection</p>
+<body>
+  <main>
+    <section id="header">
+      <h1>Welcome to Vegan Burgers Online</h1>
+      <img src="https://farmacyvegankitchen.com/wp-content/uploads/2017/05/header.jpg" alt="produce" title="produce">
+    </section>
 
-            <div id="allburgers" class = "wrapper">
-              <div v-for="burger in menu">
-                <h3>{{burger.name}}</h3>
-                <img v-bind:src="burger.imagePath" :height="400"><br>
-                <ul>
-                  <li>{{burger.kcal}} </li>
-                  <li>{{burger.madeOf}} </li>
-                <span v-if="burger.gluten">
-                <li><b>contains gluten</b></li>
-                </span>
-                <span v-if="burger.hazelnuts" >
-                <li><b>contains hazelnuts</b></li>
-                </span>
-              </ul>
-            </div>
-<!--
-        <div class="wrapper">
-            <div class"box a">
-           <h3> Smoky burger</h3>
-             <img src="https://www.sainsburysmagazine.co.uk/uploads/media/675x882/09/9289-Vegan-burger.jpg?v=1-0" alt="Smoky burger" title="Smoky black bean and sweet potato burger" height="400">
-              <ul>
-                   <li>patty made from black beans and sweet potatoes</li>
-                   <li>avocado</li>
-                   <li>chipotle sauce</li>
-                   <li>500 kCal</li>
-                   <section class="allergies"> <li>contains gluten</li></section>
-                  <li>100% vegan</li>
-             </ul>
-           </div>
+<div id="sectionwrapper">
+    <section id="burgers">
+      <h2>Select burger</h2>
+      <p>This is where you execute burger selection</p>
 
-        <div class"box b">
-           <h3> California burger</h3>
-             <img src="https://www.darngoodveggies.com/wp-content/uploads/2016/04/IMG_5050.jpg" alt="California burger" title="California burger" height="400">
-             <ul>
-                  <li>patty made from carrots and quick oats</li>
-                  <li>guacamole</li>
-                  <li>fresh corn salsa</li>
-                  <li>550 kCal</li>
-                  <section class="allergies"> <li>contains gluten</li></section>
-                  <li>100% vegan</li>
-              </ul>
-            </div>
-
-        <div class"box c">
-           <h3> Brooklyn burger</h3>
-             <img src="https://elavegan.com/wp-content/uploads/2019/09/Vegan-burger-with-Awesome-burger-patty-veggies-and-homemade-cheese.jpg" alt="Brooklyn burger" title="Brooklyn burger" height="400">
-             <ul>
-                  <li>patty made from black beans</li>
-                  <li>pineapple salsa</li>
-                  <li>600 kCal</li>
-                  <section class="allergies"> <li>contains hazelnuts</li></section>
-                  <section class="allergies"> <li>contains gluten</li></section>
-                 <li>100% vegan</li>
-            </ul>
-        </div>-->
+      <div id="allburgers" class = "wrapper">
+        <div v-for="burger in menu">
+          <h3>{{burger.name}}</h3>
+          <img v-bind:src="burger.imagePath" :height="400"><br>
+          <ul>
+            <li>{{burger.kcal}} </li>
+            <li>{{burger.madeOf}} </li>
+            <span v-if="burger.gluten">
+              <li><b>contains gluten</b></li>
+            </span>
+            <span v-if="burger.hazelnuts" >
+              <li><b>contains hazelnuts</b></li>
+            </span>
+            <label for="burger">Pick me:</label>
+            <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="checkedBurger">
+            <!--<input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="checkedBurger"> -->
+          </ul>
+        </div>
       </div>
 
-        </section>
-        <section id="customer">
-          <h2>Customer information</h2>
-          <p>This is where you provide neccessary information</p>
-        <section id="delivery information">
+    </section>
+      <section id="customer">
+        <h2>Customer information</h2>
+        <p>This is where you provide neccessary information</p>
+        <section id="delivery">
           <h3>Delivery information:</h3>
-    <form>
+          <form>
 
-      <p>
-          <label for="full name">Full name</label><br>
-          <input type="text" id="full name" name="nm" required="required" placeholder="First and last name" />
-      </p>
-      <p>
-          <label for="email">E-mail</label><br>
-          <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
-      </p>
-      <p>
-          <label for="street">Street</label><br>
-          <input type="text" id="street" name="st" required="required" placeholder="Street name" />
-      </p>
-      <p>
-          <label for="house">House</label><br>
-          <input type="number" id="house" name="hn" required="required" placeholder="House number" />
-      </p>
-    </form>
-  </section>
-  <p>
-    <label for="payment">Payment options</label><br />
-    <select id="payment" name="pay">
-        <option selected="selected"> Credit Card</option>
-        <option>Paypal</option>
-        <option>Swish</option>
-        <option>Bank transfer</option>
-    </select>
-</p>
+            <p>
+              <label for="full name">Full name</label><br>
+              <input v-model="name" placeholder="First and last name">
 
-<form>
-  <h4>Gender</h4>
-  <p>
-      <input checked="checked" type="radio" id="female" name="gender" value="f" />
-      <label for="female">Female</label><br>
-  </p>
-  <p>
-      <input type="radio" id="full name" name="gender" value="m" />
-      <label for="full name">Male</label><br>
-  </p>
-  <p>
-      <input type="radio" id="full name" name="gender" value="nb"/>
-      <label for="full name">Non-binary</label><br>
-  </p>
-  <p>
-      <input type="radio" id="no disclosure" name="gender" value="nd"/>
-      <label for="no disclosure">Do not wish to disclose</label><br>
-  </p>
-</form>
-</section>
-<button type="submit"><img src="https://www.stromstanet.se/bilder/image/articleimages%3B%3BSTN%3B2013%3B11%3B15%3B16%3Bok.png/300/ok_2398865898.png" width="30" /> Place order</button>
-</main>
-      <hr>
-      <footer>
-        &copy 2020 Vegan Burgers  Inc.
-      </footer>
-    </body>
+              <!--  <input type="text" id="full name" name="nm" required="required" placeholder="First and last name" /> -->
+
+            </p>
+            <p>
+              <label for="email">E-mail</label><br>
+              <input v-model="email" placeholder="E-mail address">
+              <!--  <input type="email" id="email" name="em" required="required" placeholder="E-mail address" /> -->
+            </p>
+            <p>
+              <label for="street">Street</label><br>
+              <input v-model="street" placeholder="Street name">
+              <!--  <input type="text" id="street" name="st" required="required" placeholder="Street name" /> -->
+            </p>
+            <p>
+              <label for="house">House</label><br>
+              <input v-model="house" type="number" placeholder="House number">
+              <!--<input type="number" id="house" name="hn" required="required" placeholder="House number" /> -->
+            </p>
+          </form>
+
+        </section>
+        <p>
+          <label for="payment">Payment options</label><br />
+          <select v-model="payment">
+            <option>Credit Card</option>
+            <option>Paypal</option>
+            <option>Swish</option>
+            <option>Bank transfer</option>
+          </select>
+
+        </p>
+
+        <form>
+          <h4>Gender</h4>
+          <p>
+            <input type="radio" id="female" value="Female" name="gender" v-model="gender">
+            <label for="female">Female</label><br>
+          </p>
+          <p>
+            <input type="radio" id="male" value="Male" name="gender" v-model="gender">
+            <label for="full name">Male</label><br>
+          </p>
+          <p>
+            <input type="radio" id="nb" value="Non-binary" name="gender" v-model="gender">
+            <label for="full name">Non-binary</label><br>
+          </p>
+          <p>
+            <input type="radio" id="nd" value="ND" name="gender" v-model="gender">
+            <label for="no disclosure">Do not wish to disclose</label><br>
+          </p>
+        </form>
+
+        <h2>Your selection</h2>
+        <span>Name: {{ name }}</span><br>
+        <span>E-mail: {{ email }}</span><br>
+        <span>Street: {{ street }}</span><br>
+        <span>House number: {{ house }}</span><br>
+        <span>Gender: {{ gender }}</span><br>
+        <span>Payment: {{ payment }}</span><br>
+        <span>Your order: {{ checkedBurger }}</span><br>
+
+
+
+      </section>
+
+
+      <div id="submitbutton">
+        <button v-on:click="markDone(key)"><img src="https://www.stromstanet.se/bilder/image/articleimages%3B%3BSTN%3B2013%3B11%3B15%3B16%3Bok.png/300/ok_2398865898.png" width="30" /> Place order</button>
+      </div>
+
+    </div>
+
+  </main>
+  <hr>
+  <footer>
+    &copy 2020 Vegan Burgers  Inc.
+  </footer>
+</body>
 </html>
