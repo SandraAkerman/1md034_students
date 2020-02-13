@@ -4,7 +4,6 @@
 <head>
   <script src="/socket.io/socket.io.js" defer></script>
   <script type="text/javascript" src="js/menu.js"></script>
-  <script src="js/js_script.js" defer></script>
   <script src="js/vue_script.js" defer></script>
   <script src="https://vuejs.org/js/vue.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -20,34 +19,34 @@
       <img src="https://farmacyvegankitchen.com/wp-content/uploads/2017/05/header.jpg" alt="produce" title="produce">
     </section>
 
-<div id="sectionwrapper">
-    <section id="burgers">
-      <h2>Select burger</h2>
-      <p>This is where you execute burger selection</p>
+    <div id="sectionwrapper">
+      <section id="burgers">
+        <h2>Select burger</h2>
+        <p>Please pick the burger(s) you want to order</p>
 
-      <div id="allburgers" class = "wrapper">
-        <div v-for="burger in menu">
-          <h3>{{burger.name}}</h3>
-          <img v-bind:src="burger.imagePath" :height="400"><br>
-          <ul>
-            <li>{{burger.kcal}} </li>
-            <li>{{burger.madeOf}} </li>
-            <span v-if="burger.gluten">
-              <li><b>contains gluten</b></li>
-            </span>
-            <span v-if="burger.hazelnuts" >
-              <li><b>contains hazelnuts</b></li>
-            </span>
-            <label for="burger">Pick me:</label>
-            <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="checkedBurger">
-          </ul>
+        <div id="allburgers" class = "wrapper">
+          <div v-for="burger in menu">
+            <h3>{{burger.name}}</h3>
+            <img v-bind:src="burger.imagePath" :height="400"><br>
+            <ul>
+              <li>{{burger.kcal}} </li>
+              <li>{{burger.madeOf}} </li>
+              <span v-if="burger.gluten">
+                <li><b>contains gluten</b></li>
+              </span>
+              <span v-if="burger.hazelnuts" >
+                <li><b>contains hazelnuts</b></li>
+              </span>
+              <label for="burger">Pick me:</label>
+              <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="checkedBurger">
+            </ul>
+          </div>
         </div>
-      </div>
 
-    </section>
+      </section>
       <section id="customer">
         <h2>Customer information</h2>
-        <p>This is where you provide neccessary information</p>
+        <p>Please fill in your delivery information</p>
         <section id="delivery">
           <h3>Delivery information:</h3>
           <form>
@@ -61,17 +60,6 @@
               <label for="email">E-mail</label><br>
               <input v-model="email" placeholder="E-mail address">
             </p>
-<!--
-            <p>
-              <label for="street">Street</label><br>
-              <input v-model="street" placeholder="Street name">
-            </p>
-
-            <p>
-              <label for="house">House</label><br>
-              <input v-model="house" type="number" placeholder="House number">
-              <input type="number" id="house" name="hn" required="required" placeholder="House number" />
-            </p> -->
           </form>
 
         </section>
@@ -105,36 +93,35 @@
             <label for="no disclosure">Do not wish to disclose</label><br>
           </p>
 
-          <h1> Click in the map! </h1>
+          <h1> Choose delivery location </h1>
           <div class="view-box">
             <div id= "dots" v-on:click="displayOrder">
-                <div
-                  v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                  T
-                </div>
+              <div
+              v-bind:style="{ left: details.x + 'px', top: details.y + 'px'}">
+              T
             </div>
           </div>
-        </form>
+        </div>
+      </form>
 
-        <h2>Your selection</h2>
-        <span>Name: {{name}}</span><br>
-        <span>E-mail: {{email}}</span><br>
-        <span>Gender: {{gender}}</span><br>
-        <span>Payment: {{payment}}</span><br>
-        <span>Your order: {{checkedBurger}}</span><br>
+      <h2>Your selection</h2>
+      <span>Name: {{name}}</span><br>
+      <span>E-mail: {{email}}</span><br>
+      <span>Gender: {{gender}}</span><br>
+      <span>Payment: {{payment}}</span><br>
+      <span>Your order: {{checkedBurger}}</span><br>
 
-      </section>
+    </section>
 
-
-      <div id="submitbutton" v-on:click="addOrder">
-        <button v-on:click="markDone"><img src="https://www.stromstanet.se/bilder/image/articleimages%3B%3BSTN%3B2013%3B11%3B15%3B16%3Bok.png/300/ok_2398865898.png" width="30" /> Place order</button>
-      </div>
+    <div id="submitbutton" v-on:click="addOrder">
+      <button v-on:click="markDone"><img src="https://www.stromstanet.se/bilder/image/articleimages%3B%3BSTN%3B2013%3B11%3B15%3B16%3Bok.png/300/ok_2398865898.png" width="30" /> Place order</button>
     </div>
+  </div>
 
-  </main>
-  <hr>
-  <footer>
-    &copy 2020 Vegan Burgers  Inc.
-  </footer>
+</main>
+<hr>
+<footer>
+  &copy 2020 Vegan Burgers  Inc.
+</footer>
 </body>
 </html>
