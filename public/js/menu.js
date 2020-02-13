@@ -2,7 +2,7 @@
 let menu = [
   {
   "name": "Smoky burger",
-  "kcal": 500,
+  "kcal": "500 kCal",
   "madeOf": "patty made from black beans and sweet potatoes",
   "gluten": true,
   "hazelnuts": false,
@@ -11,7 +11,7 @@ let menu = [
   ,
   {
   "name": "California burger",
-  "kcal": 550,
+  "kcal": "550 kCal",
   "madeOf": "patty made from carrots and quick oats",
   "gluten": true,
   "hazelnuts": false,
@@ -20,7 +20,7 @@ let menu = [
   ,
   {
   "name": "Brooklyn burger",
-  "kcal": 600,
+  "kcal": "600 kCal",
   "madeOf": "patty made from black beans",
   "gluten": true,
   "hazelnuts": true,
@@ -29,7 +29,7 @@ let menu = [
   ,
   {
   "name": "Amazing burger",
-  "kcal": 600,
+  "kcal": "600 kCal",
   "madeOf": "patty made from carrots, corn and beetroot",
   "gluten": true,
   "hazelnuts": false,
@@ -38,7 +38,7 @@ let menu = [
   ,
   {
   "name": "Healthy burger",
-  "kcal": 450,
+  "kcal": "450 kCal",
   "madeOf": "patty made from oats and chickpeas",
   "gluten": false,
   "hazelnuts": false,

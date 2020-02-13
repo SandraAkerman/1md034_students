@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="/socket.io/socket.io.js" defer></script>
   <script type="text/javascript" src="js/menu.js"></script>
-  <!--  <script src="js/js_script.js" defer></script>-->
+  <script src="js/js_script.js" defer></script>
   <script src="js/vue_script.js" defer></script>
   <script src="https://vuejs.org/js/vue.js"></script>
-
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="css/deli-very.css">
   <title>Vegan burgers</title><br>
   <meta charset="utf-8"/>
 </head>
@@ -64,16 +65,17 @@
               <input v-model="email" placeholder="E-mail address">
               <!--  <input type="email" id="email" name="em" required="required" placeholder="E-mail address" /> -->
             </p>
+<!--
             <p>
               <label for="street">Street</label><br>
               <input v-model="street" placeholder="Street name">
-              <!--  <input type="text" id="street" name="st" required="required" placeholder="Street name" /> -->
             </p>
+
             <p>
               <label for="house">House</label><br>
               <input v-model="house" type="number" placeholder="House number">
-              <!--<input type="number" id="house" name="hn" required="required" placeholder="House number" /> -->
-            </p>
+              <input type="number" id="house" name="hn" required="required" placeholder="House number" />
+            </p> -->
           </form>
 
         </section>
@@ -106,13 +108,24 @@
             <input type="radio" id="nd" value="ND" name="gender" v-model="gender">
             <label for="no disclosure">Do not wish to disclose</label><br>
           </p>
+
+          <h1> Click in the map! </h1>
+          <div class="view-box">
+            <div id="dots" v-on:click="addOrder">
+                <div
+                  v-for="(order, key) in orders"
+                  v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                  {{key}}
+                </div>
+            </div>
+          </div>
         </form>
 
         <h2>Your selection</h2>
         <span>Name: {{ name }}</span><br>
         <span>E-mail: {{ email }}</span><br>
-        <span>Street: {{ street }}</span><br>
-        <span>House number: {{ house }}</span><br>
+      <!--  <span>Street: {{ street }}</span><br>
+        <span>House number: {{ house }}</span><br> -->
         <span>Gender: {{ gender }}</span><br>
         <span>Payment: {{ payment }}</span><br>
         <span>Your order: {{ checkedBurger }}</span><br>
